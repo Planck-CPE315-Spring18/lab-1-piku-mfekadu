@@ -1,3 +1,4 @@
+
     .syntax unified
 
     @ --------------------------------
@@ -12,7 +13,7 @@ main:
     bl      printf
 
     @ Exit from 'main'. This is like 'return 0' in C.
-    mov     r0, #0      @ Return 0.
+    mov     r0, #0   @ Return 0.
     @ Pop the dummy ip to reverse our alignment fix, and pop the original lr
     @ value directly into pc — the Program Counter — to return.
     pop     {ip, pc}
@@ -21,4 +22,4 @@ main:
     @ Data for the printf call. The GNU assembler's ".asciz" directive
     @ automatically adds a NULL character termination.
 message:
-    .asciz  "Hello, world.\n"
+    .asciz  "Raspberry Pie? Sweet!\nUnder the crust, the circuits\ntaste like solder, ew\n"
